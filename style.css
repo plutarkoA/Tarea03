@@ -1,0 +1,94 @@
+/* Estilos propios para apoyar la demostración de la Tarea 3
+   - Meta viewport está en el HTML
+   - Media queries (mobile-first) para cambios progresivos
+   - Ejemplo de CSS Grid para "Grid-View"
+*/
+
+:root {
+  --radius: 0.6rem;
+  --shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.page-bg {
+  background: linear-gradient(180deg, #efefef, #fafafa);
+}
+
+.site-wrapper {
+  box-shadow: var(--shadow);
+}
+
+/* Código en bloques */
+.code-block {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: var(--radius);
+  padding: .75rem .9rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: .9rem;
+  overflow-x: auto;
+}
+
+/* Galería (cajas) */
+.gallery-box {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff7ed;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+.gallery-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-box figcaption {
+  padding: .5rem;
+  font-size: .9rem;
+  color: #6b7280;
+}
+
+/* Footer */
+.footer-box {
+  background: #343a40;
+  color: #e9ecef;
+  border-radius: .35rem;
+  padding: .75rem 1rem;
+  text-align: center;
+}
+
+/* Demostración de media queries (aplican sobre .card-demo del HTML) */
+.card-demo { font-size: 1rem; }
+@media (min-width: 576px) {
+  .card-demo { font-size: 1.05rem; }
+}
+@media (min-width: 768px) {
+  .card-demo { font-size: 1.1rem; }
+}
+@media (min-width: 992px) {
+  .card-demo { font-size: 1.15rem; }
+}
+
+/* Grid-View (CSS Grid) para la muestra de tarjetas numeradas */
+.grid-sample {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+.grid-item {
+  display: grid;
+  place-items: center;
+  height: 70px;
+  background: #eab30822;
+  border: 1px dashed #f59e0b;
+  border-radius: .4rem;
+  color: #92400e;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .grid-sample { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 992px) {
+  .grid-sample { grid-template-columns: repeat(6, 1fr); }
+}

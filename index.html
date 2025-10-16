@@ -1,1 +1,334 @@
-<h1> Github pageeee</h1>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarea 3 – Diseño Web Responsivo y Bootstrap 5</title>
+  <meta name="description" content="Documentación y demo: Diseño Web Responsivo, Viewport, Media Queries, Grid-View y Bootstrap 5 (Containers, Grid, Flex, Carousel, Navbar)." />
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-light">
+  <!-- Fondo del Navegador (envoltorio general) -->
+  <div class="page-bg py-3">
+    <div class="container-lg site-wrapper shadow-sm rounded-3 bg-white">
+
+      <!-- Header (Fondo Principal y Header) -->
+      <header class="p-3">
+        <div class="row g-3 align-items-stretch">
+          <!-- Columna: Imagen o información referencial -->
+          <div class="col-12 col-md-6">
+            <div class="h-100 p-3 border rounded-3 bg-success-subtle">
+              <h1 class="h4 mb-3">Diseño Web Responsivo</h1>
+              <p class="mb-0">
+                Esta página documenta los pilares del diseño adaptable y demuestra un
+                maquetado responsivo con CSS y Bootstrap 5.
+              </p>
+            </div>
+          </div>
+          <!-- Columna: Texto o contenido relacionado -->
+          <div class="col-12 col-md-6">
+            <div class="h-100 p-3 border rounded-3 bg-success-subtle">
+              <h2 class="h5 mb-3">ISW-512 – Tarea 3</h2>
+              <ul class="mb-0">
+                <li>Viewport y Media Queries</li>
+                <li>Grid-View (CSS Grid)</li>
+                <li>Bootstrap 5: Containers, Grid, Flex, Carousel, Navbar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navegación Principal (Navbar de Bootstrap) -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-3 mx-3 mb-3 px-3">
+        <a class="navbar-brand fw-semibold" href="#">Tarea 3</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#responsivo">Responsivo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#viewport">Viewport</a></li>
+            <li class="nav-item"><a class="nav-link" href="#media-queries">Media Queries</a></li>
+            <li class="nav-item"><a class="nav-link" href="#grid-view">Grid-View</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bootstrap5">Bootstrap 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          </ul>
+          <span class="navbar-text text-white-50 small">
+            Demostración Navbar (Bootstrap 5)
+          </span>
+        </div>
+      </nav>
+
+      <!-- Cuerpo principal: Aside + Main -->
+      <div class="px-3 pb-3">
+        <div class="row g-3">
+          <!-- Aside -->
+          <aside class="col-12 col-lg-4">
+            <div class="p-3 border rounded-3 bg-primary-subtle">
+              <h3 class="h5">Aside</h3>
+              <p class="mb-2">Contenido contextual, recursos y notas.</p>
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h4 class="card-title h6">Contenido</h4>
+                  <p class="card-text small mb-0">
+                    Este bloque simula la sección “Contenido” del Aside del diagrama.
+                    En pantallas pequeñas se muestra arriba; en pantallas grandes se ubica a la izquierda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main -->
+          <main class="col-12 col-lg-8">
+            <section id="responsivo" class="p-3 border rounded-3 bg-primary-subtle mb-3">
+              <h3 class="h5">Artículo 1 — Diseño Web Responsivo</h3>
+              <p class="mb-2">
+                El diseño web responsivo permite que un sitio se adapte a diferentes tamaños
+                de pantalla y densidades de píxeles, garantizando una experiencia consistente
+                y usable. En la actualidad, los usuarios acceden desde teléfonos, tablets, laptops
+                y pantallas 4K; un diseño adaptable mejora la legibilidad, la navegación y
+                el rendimiento percibido.
+              </p>
+              <ul class="mb-0">
+                <li>Enfoque mobile-first y contenido flexible.</li>
+                <li>Imágenes y tipografías escalables.</li>
+                <li>Breakpoints con media queries para ajustar el layout.</li>
+              </ul>
+            </section>
+
+            <section id="viewport" class="p-3 border rounded-3 bg-primary-subtle mb-3">
+              <h3 class="h5">Artículo 2 — Viewport</h3>
+              <p class="mb-2">
+                El viewport define el área visible de una página web en el dispositivo. En móviles,
+                es esencial configurar la metaetiqueta para que el ancho lógico coincida con el
+                ancho del dispositivo y el nivel de zoom inicial sea adecuado.
+              </p>
+              <pre class="code-block"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+              <p class="mb-0">
+                Con este ajuste, las unidades relativas (%, vw, rem) y los breakpoints se comportan
+                como se espera en distintos dispositivos.
+              </p>
+            </section>
+          </main>
+        </div>
+      </div>
+
+      <!-- Sección Media Queries + Grid-View -->
+      <div class="px-3 pb-3">
+        <div class="row g-3">
+          <section id="media-queries" class="col-12 col-xl-6">
+            <div class="p-3 border rounded-3 bg-body-tertiary">
+              <h3 class="h5">CSS3 Media Queries</h3>
+              <p>
+                Las media queries permiten cambiar estilos según el ancho de la ventana,
+                la orientación o la densidad de píxeles. Ejemplo práctico (mobile-first):
+              </p>
+              <pre class="code-block"><code>/* Base (móvil) */
+.card-demo { font-size: 1rem; }
+
+/* ≥ 576px */
+@media (min-width: 576px) {
+  .card-demo { font-size: 1.05rem; }
+}
+
+/* ≥ 768px */
+@media (min-width: 768px) {
+  .card-demo { font-size: 1.1rem; }
+}
+
+/* ≥ 992px */
+@media (min-width: 992px) {
+  .card-demo { font-size: 1.15rem; }
+}</code></pre>
+              <div class="card card-demo shadow-sm">
+                <div class="card-body">
+                  Este texto aumenta levemente de tamaño a medida que la pantalla es más ancha.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="grid-view" class="col-12 col-xl-6">
+            <div class="p-3 border rounded-3 bg-body-tertiary">
+              <h3 class="h5">Grid-View (CSS Grid)</h3>
+              <p class="mb-2">
+                CSS Grid permite definir cuadrículas bidimensionales. Ejemplo de cuadrícula
+                responsiva para tarjetas:
+              </p>
+              <div class="grid-sample">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+              </div>
+              <pre class="code-block mt-3"><code>.grid-sample {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
+}
+@media (min-width: 768px) {
+  .grid-sample { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 992px) {
+  .grid-sample { grid-template-columns: repeat(6, 1fr); }
+}</code></pre>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Sección Bootstrap 5 -->
+      <section id="bootstrap5" class="px-3 pb-3">
+        <div class="p-3 border rounded-3 bg-white">
+          <h3 class="h5 mb-3">Bootstrap 5: Componentes Clave</h3>
+
+          <!-- Containers -->
+          <article class="mb-4">
+            <h4 class="h6">Containers</h4>
+            <p class="mb-2">
+              Los contenedores <code>.container</code> y <code>.container-fluid</code> establecen
+              anchos máximos y paddings horizontales. Este sitio usa <code>.container-lg</code> para el contenido.
+            </p>
+            <pre class="code-block"><code>&lt;div class="container"&gt;...&lt;/div&gt;
+&lt;div class="container-fluid"&gt;...&lt;/div&gt;</code></pre>
+          </article>
+
+          <!-- Grid System -->
+          <article class="mb-4">
+            <h4 class="h6">Grid System</h4>
+            <p class="mb-2">
+              El sistema de cuadrícula de Bootstrap divide la fila en 12 columnas. Ejemplo:
+            </p>
+            <pre class="code-block"><code>&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6"&gt;Col A&lt;/div&gt;
+  &lt;div class="col-12 col-md-6"&gt;Col B&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </article>
+
+          <!-- Flex -->
+          <article class="mb-4">
+            <h4 class="h6">Flex</h4>
+            <p class="mb-2">
+              Las utilidades Flex de Bootstrap agilizan alineaciones y distribuciones.
+            </p>
+            <div class="d-flex gap-2 flex-wrap border rounded-3 p-2">
+              <span class="badge text-bg-secondary">.d-flex</span>
+              <span class="badge text-bg-secondary">.justify-content-between</span>
+              <span class="badge text-bg-secondary">.align-items-center</span>
+              <span class="badge text-bg-secondary">.flex-wrap</span>
+            </div>
+            <pre class="code-block mt-2"><code>&lt;div class="d-flex justify-content-between align-items-center"&gt;...&lt;/div&gt;</code></pre>
+          </article>
+
+          <!-- Carousel -->
+          <article class="mb-4">
+            <h4 class="h6">Carousel</h4>
+            <div id="demoCarousel" class="carousel slide rounded-3 overflow-hidden shadow-sm" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Imagen 1 aleatoria">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Imagen 2 aleatoria">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="Imagen 3 aleatoria">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev" aria-label="Anterior">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next" aria-label="Siguiente">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+            <pre class="code-block mt-2"><code>&lt;div id="demoCarousel" class="carousel slide" data-bs-ride="carousel"&gt;...&lt;/div&gt;</code></pre>
+          </article>
+
+          <!-- Navbar (ya implementada arriba) -->
+          <article>
+            <h4 class="h6">Navbar</h4>
+            <p class="mb-0">
+              La barra de navegación superior usa <code>.navbar</code>, colapsa en móvil y expande en escritorio.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Galería (img1..img4) -->
+      <section id="galeria" class="px-3 pb-3">
+        <div class="p-3 border rounded-3 bg-white">
+          <h3 class="h5 mb-3">Galería (4 imágenes)</h3>
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <figure class="gallery-box">
+                <img src="https://picsum.photos/400/300?random=11" alt="Imagen 1 de la galería" />
+                <figcaption>img 1</figcaption>
+              </figure>
+            </div>
+            <div class="col-6 col-md-3">
+              <figure class="gallery-box">
+                <img src="https://picsum.photos/400/300?random=12" alt="Imagen 2 de la galería" />
+                <figcaption>img 2</figcaption>
+              </figure>
+            </div>
+            <div class="col-6 col-md-3">
+              <figure class="gallery-box">
+                <img src="https://picsum.photos/400/300?random=13" alt="Imagen 3 de la galería" />
+                <figcaption>img 3</figcaption>
+              </figure>
+            </div>
+            <div class="col-6 col-md-3">
+              <figure class="gallery-box">
+                <img src="https://picsum.photos/400/300?random=14" alt="Imagen 4 de la galería" />
+                <figcaption>img 4</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer (Pie de página con dos columnas) -->
+      <footer class="px-3 pb-3">
+        <div class="p-3 border rounded-3 bg-dark-subtle">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <div class="footer-box">Contenido Footer 1</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="footer-box">Contenido Footer 2</div>
+            </div>
+          </div>
+          <p class="text-center small text-muted mt-3 mb-0">
+            © 2025 — Demostración académica. Bootstrap 5.3.3 (CDN).
+          </p>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS (bundle con Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
